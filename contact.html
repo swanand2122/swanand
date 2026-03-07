@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.contact-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.contact-box {
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 30px 50px;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+    min-width: 250px;
+    text-align: center;
+    border: 1.5px solid #00d4ff;
+    transition: transform 0.2s;
+}
+.contact-box:hover {
+    transform: translateY(-7px) scale(1.04);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.23);
+}
+.contact-icon {
+    font-size: 2.3rem;
+    margin-bottom: 12px;
+    display: block;
+    color: #00d4ff;
+}
+.contact-info {
+    font-size: 1.1rem;
+    margin-top: 8px;
+    word-break: break-all;
+}
+.contact-info a {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
+.contact-icon svg {
+    vertical-align: middle;
+}
+@media (max-width:600px) {
+    .contact-boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    .contact-box {
+        min-width: 180px;
+        padding: 18px 20px;
+    }
+}
+</style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"></div>
+      
+        <div class="menu-icon" onclick="toggleMenu()">
+          ☰
+        </div>
+      
+        <ul class="nav-links" id="menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Personal.html">Personal</a></li>
+          <li><a href="academic.html">Academic</a></li>
+          <li><a href="technical.html">Technical</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+<section class="page">
+    <h1>Contact Me</h1>
+    <div class="contact-boxes">
+        <div class="contact-box">
+            <span class="contact-icon">&#9993;</span>
+            <div class="contact-info">
+                <a 
+                    href="https://mail.google.com/mail/u/0/#inbox"
+                    onclick="window.location='https://mail.google.com/mail/u/0/#inbox'; return false;"
+                    title="Open your inbox to email me"
+                >
+                    swanandmule7@gmail.com
+                </a>
+            </div>
+        </div>
+        <div class="contact-box">
+            <span class="contact-icon">&#9742;</span>
+            <div class="contact-info">+919270774127</div>
+        </div>
+        <div class="contact-box">
+            <span class="contact-icon">
+                <!-- Original Instagram SVG icon -->
+                <svg width="1.8em" height="1.8em" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
+                  <linearGradient id="insta-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#f58529"/>
+                    <stop offset="30%" stop-color="#dd2a7b"/>
+                    <stop offset="60%" stop-color="#8134af"/>
+                    <stop offset="100%" stop-color="#515bd4"/>
+                  </linearGradient>
+                  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9c63.6 0 114.9-51.3 114.9-114.9s-51.3-114.9-114.9-114.9zm0 186c-39.5 0-71.6-32.1-71.6-71.6s32.1-71.6 71.6-71.6 71.6 32.1 71.6 71.6-32.1 71.6-71.6 71.6zm146.4-194.3c0 14.9-12.1 27-27 27-14.9 0-27-12.1-27-27s12.1-27 27-27 27 12.1 27 27zm76.1 27.2c-1.7-35.3-9.9-66.7-36.2-92.9C395.7 9.9 364.3 1.7 329 0C282.7-1.7 165.3-1.7 119 0c-35.3 1.7-66.7 9.9-92.9 36.2C9.9 65.3 1.7 96.7 0 132c-1.7 46.3-1.7 163.7 0 210 1.7 35.3 9.9 66.7 36.2 92.9C65.3 502.1 96.7 510.3 132 512c46.3 1.7 163.7 1.7 210 0 35.3-1.7 66.7-9.9 92.9-36.2 26.3-26.3 34.5-57.7 36.2-92.9 1.7-46.3 1.7-163.7 0-210zM398.8 388c-7.8 19.6-22.6 34.4-42.2 42.2-29.2 11.6-98.5 9-132.6 9s-103.4 2.6-132.6-9c-19.6-7.8-34.4-22.6-42.2-42.2-11.6-29.2-9-98.5-9-132.6s-2.6-103.4 9-132.6c7.8-19.6 22.6-34.4 42.2-42.2C76.6 13.4 145.9 16 180 16s103.4-2.6 132.6 9c19.6 7.8 34.4 22.6 42.2 42.2 11.6 29.2 9 98.5 9 132.6s2.6 103.4-9 132.6z" fill="url(#insta-gradient)"/>
+                </svg>
+            </span>
+            <div class="contact-info">
+                <a href="https://instagram.com/swanand_mule_07" target="_blank" rel="noopener" title="Follow me on Instagram">
+                    @swanand_mule_07
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
+<html>

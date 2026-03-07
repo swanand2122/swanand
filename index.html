@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+    content="width=device-width,initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>My Portfolio</title>
+   <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+#fileInput {
+    display: none;
+}
+.profile-wrapper {
+
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+.profile-img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    cursor: pointer;
+    transition: 0.3s;
+    
+    background: linear-gradient(45deg, #00f5ff, #ff00c8, #00ff88);
+    background-size: 300% 300%;
+    animation: gradientRotate 6s linear infinite;
+}
+.profile-img:hover  {
+    transform: scale(1.05);
+}
+.profile-img img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+}
+@keyframes gradientRotate{
+    0% { background-position:0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.hero {
+    margin:0;
+    height: 100vh;
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("P.jpg") no-repeat center center fixed;
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+    
+    
+
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.content {
+    animation: fadeUp 1.5s ease;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.name {
+    color: #00ffd5;
+}
+
+.typing {
+    margin: 15px 0;
+    font-size: 26px;
+    color: #00ffd5;
+    min-height: 35px;
+}
+
+p {
+    max-width: 500px;
+    margin: auto;
+    line-height: 1.6;
+    content:""
+}
+
+.buttons {
+    margin-top: 25px;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: #000;
+    background: #00ffd5;
+    padding: 12px 22px;
+    margin: 8px;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    transform: scale(1.1);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #00ffd5;
+    color: #00ffd5;
+}
+
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+    <div class="content">
+         <div class="profile-wrapper">
+            <div class="profile-img">
+                <img id="profilePhoto" src="swanand.jpeg" alt="Profile Photo">
+            </div>
+            
+
+            </div>
+        
+        <h1>Hello, I'm <span class="name">Swanand Mule</span></h1>
+        <h2 class="typing"></h2>
+        <p>
+            Where Creativity Meets Technology 💡🖥️
+        </p>
+
+        <div class="buttons">
+            <a href="Personal.html" class="btn">Explore More</a>
+        
+        
+            </div>
+    </div>
+</section>
+<script>
+const text = ["Student", "Web Developer", "Frontend Designer", "Programmer"];
+let index = 0;
+let charIndex = 0;
+const typingElement = document.querySelector(".typing");
+
+function typeEffect() {
+    if (charIndex < text[index].length) {
+        typingElement.textContent += text[index].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeEffect, 100);
+    } else {
+        setTimeout(eraseEffect, 1500);
+    }
+}
+
+function eraseEffect() {
+    if (charIndex > 0) {
+        typingElement.textContent = text[index].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(eraseEffect, 60);
+    } else {
+        index = (index + 1) % text.length;
+        setTimeout(typeEffect, 500);
+    }
+}
+
+typeEffect();
+
+</script>
+</body>
+</html>
